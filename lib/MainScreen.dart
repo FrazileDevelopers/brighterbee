@@ -61,7 +61,7 @@ final List<Category> categories = [
     7,
     "C#",
     icon: Image.asset(
-      'assets/images/c#.png',
+      'assets/images/cha.png',
       fit: BoxFit.scaleDown,
       width: 60.0,
     ),
