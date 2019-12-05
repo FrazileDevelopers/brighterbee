@@ -70,7 +70,7 @@ final List<Category> categories = [
     8,
     "C++",
     icon: Image.asset(
-      'assets/images/c++.png',
+      'assets/images/cpl.png',
       fit: BoxFit.scaleDown,
       width: 60.0,
     ),
@@ -79,7 +79,7 @@ final List<Category> categories = [
     9,
     "CSS",
     icon: Image.asset(
-      'assets/images/css.png',
+      'assets/images/css.jpeg',
       fit: BoxFit.scaleDown,
       width: 60.0,
     ),
