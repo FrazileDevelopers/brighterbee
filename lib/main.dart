@@ -27,23 +27,26 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 7,
-      navigateAfterSeconds: new OnBoardingPage(),
-      title: Text(
-        "welcome to brighterbee",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 30,
+  Widget build(BuildContext context) => SplashScreen(
+        seconds: 4,
+        navigateAfterSeconds: new OnBoardingPage(),
+        title: Text(
+          "welcome to Brighterbee",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
+          ),
+          textAlign: TextAlign.center,
         ),
-        textAlign: TextAlign.center,
-      ),
-      backgroundColor: Colors.yellowAccent[300],
-      photoSize: 120.0,
-      loaderColor: Colors.red,
-    );
-  }
+        image: Image.asset(
+          'assets/images/ic_launcher.png',
+          fit: BoxFit.fill,
+          width: 200.0,
+        ),
+        backgroundColor: Colors.yellowAccent[300],
+        photoSize: 220.0,
+        loaderColor: Colors.red,
+      );
 }
 
 class OnBoardingPage extends StatelessWidget {
@@ -57,7 +60,10 @@ class OnBoardingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     const bodyStyle = TextStyle(fontSize: 19.0);
     const pageDecoration = const PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
+      titleTextStyle: TextStyle(
+        fontSize: 28.0,
+        fontWeight: FontWeight.w700,
+      ),
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: Colors.white,
@@ -72,28 +78,27 @@ class OnBoardingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               Expanded(
-                  child: Text(
-                      "Social good apps can be used to educate and to provide that specific skill set which makes that student fir for hiring",
-                      style: bodyStyle)),
+                child: Text(
+                  "Social good apps can be used to educate and to provide that specific skill set which makes that student fir for hiring",
+                  style: bodyStyle,
+                ),
+              ),
             ],
           ),
-          image: Image.network(
-              "https://flutter.io/images/catalog-widget-placeholder.png"),
+          image: Image.network("assets/images/img1.jpg"),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Get Prepared",
           body: "It is good to rub , and polish our brain against of others",
-          image: Image.network(
-              "https://flutter.io/images/catalog-widget-placeholder.png"),
+          image: Image.asset("assets/images/img2.jpg"),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Learn as you go",
           body:
               "Download the DEXTERIX app and master the market with our mini-lesson.",
-          image: Image.network(
-              "https://flutter.io/images/catalog-widget-placeholder.png"),
+          image: Image.network("assets/images/img3.jpg"),
           decoration: pageDecoration,
         ),
         PageViewModel(
